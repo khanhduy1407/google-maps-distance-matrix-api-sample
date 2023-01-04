@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/style.css">    
+    <title>Distance Between Two Address</title>
+</head>
+<body>
+    <div class="header">
+            <div class="row">
+                <h1>Calculate driving distance between two address</h1>
+            </div>
+    </div>
+
+    <div class="container">
+        <form>
+            <!-- Location 1 -->
+            <div class="row">
+                <div class="location-label">
+                    <label>Origin (A): </label>                                    
+                </div>
+                <div class="location-input">
+                    <textarea id="location-1" name="origin" placeholder="Enter a start location..."></textarea>
+                </div>
+            </div>
+            <!-- Location 2 -->
+            <div class="row">
+                <div class="location-label">
+                    <label>Destination (B): </label>
+                </div>
+                <div class="location-input">
+                    <textarea id="location-2" name="destination" placeholder="Enter a last location..."></textarea>
+                </div>
+            </div>
+
+            <!-- Submit button -->
+            <div class="row">
+                <button class="button" type="button" onclick="clearRoute();">Clear</button>
+                <button class="button" type="button" onclick="calcRoute();">Submit</button>
+            </div>      
+            
+            <!-- Stats table -->                
+            <div id="output" class="result-table"></div>
+       </form>
+                
+            <div class="container-map" id="google-map"></div>   
+    </div>
+</div>
+
+        <div class="footer">
+            <p>Created by <a href="https://www.facebook.com/khanhduy1407" target="_blank">NKDuy</a> with ❤️</p>                 
+        </div>
+
+</body>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDSewxCi0pzBettr_Bw1JYtPOulIfpbQ9E&libraries=places"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="js/main.js"></script>
+</html>
